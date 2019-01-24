@@ -1,0 +1,61 @@
+How did viewing a diff between two versions of a file hlep you see the bug that was introduced?
+
+The "fc" function was instrumental is automatically scanning
+the underlying code and bringin the overt differences to the surface.
+Were this done by hand it would have taken much much much longer
+
+What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like google docs does?
+
+Pros:
+Each Change is logical
+the user dictates the commit
+Each commit has a footnote indicating what changed
+commits can be of any length of time or size
+
+Cons:
+The behavior needs to be trained
+THe size of a commit could be too big or too small
+Humans might under / over commit
+
+Why do you think some version control systems, like Git, allow saving
+multiple files in one commit, while others- like google docs- 
+treat each file seperately?
+
+Because a programming environment is much more inter-related than a
+document plstform might be. It's also more likely for a project
+in Git to have multiple files taht are related to it, as compared to 
+Good where files are more piecemiel.
+
+How can you use that commands git log and git diff to view the history
+of files?
+
+git log
+In the case of git log, you cna get a list of all of the iterations of 
+a particular commit, and reference their IDs. Each line should give a 
+brief description of what was changed in that version, so you should 
+have an idea going in to help you look.
+
+git diff
+[ID 1] [ID 2]
+Compares the two commit IDs line-by-line. Any changes from 1 to the 
+other will be indicated. a "+" equates a line add, and a "-" equates 
+a line deletion.
+
+How might using version control make you more confident to make changes 
+that could break something?
+
+The knowledge that frequent commits captures small changes gives a 
+level of confidence to make them. As long as the commits are managable, 
+a change can be made with the full faith and confidence that it isn't 
+the end-all be-all. Even if a bug isn;t noticed in the first or second 
+(or even 10th) commit since the last know bugless version, it will be 
+relatively simple to go back, dissect the issue, and narrow it down 
+based on the changes that have been made.
+
+Now that you have your workspace set up, what do you want to try using 
+Git for?
+
+I'd like to use Git primarily for analysing code that is already current. Since I won;t be writing much original stuff on my own, I'll have to 
+insert myself into code that already exists. I can also use it to 
+navigate through a linx environment if needed, and to dissect and 
+analyse html codes & CSS instructions in apps I already use (liek KIP).
