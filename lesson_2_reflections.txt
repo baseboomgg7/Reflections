@@ -1,0 +1,21 @@
+*Lesson 3 also*
+
+What happens when you initialize a repository? Why do you need to do it?
+
+Initially, a folder \ destination \ etc will not contain any information 
+that makes it a true repository, it's just a regular folder like 
+everyhting else. Running git init creates a hidden file with the 
+meta-data necesasry to make this a .git repository. It doesn not make 
+the initial commit (this needs to be done by the user), only the .git 
+repository information.
+
+How is the staging area different from the working directory and the 
+repository? What value do you think it offers?
+
+Whereas the working directory is in a constant "as-is" state, the 
+staging area holds changes- one or many- without (saving) changing the
+ "as-is" nature of the working directory. The staging area holds all
+ of the changes to be committed before they become a commit. In this 
+ way, it's possible to make more than one change to small working files 
+ before makign the more over-arching, logical commit to hold the whole 
+ change.
