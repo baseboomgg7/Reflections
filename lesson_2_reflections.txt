@@ -19,3 +19,65 @@ staging area holds changes- one or many- without (saving) changing the
  way, it's possible to make more than one change to small working files 
  before makign the more over-arching, logical commit to hold the whole 
  change.
+
+ What are some situations when branches would be helpful in keeping 
+ your history organized? How would branches help?
+
+ Brnaching is useful for making different tracks for experimental 
+ features, or flirting with different changes. Creating branches to 
+ work on these features lets you continue to develop the master branch 
+ while simultaneously working on the peripheral branches. This makes a 
+ chain of different commits along each branch which devleop 
+ irrespective of one another; in this way, you can avoid "hopping" 
+ around the commit chain to access certain features and develop in a 
+ clear way. This also allows for the changes on one branch to eventually
+ be merged with one another, so the development tracks can be unified. 
+ Havingbranches is another way to allow for the meaningful development 
+ of features and code without the fear of breaking the whoel thing. 
+ Branches enable more pointed development as compared to commits alone.
+
+ How do the diagrams help you visualize the branch structure?
+
+ Diagrams help visualize the branch structure by showing the "lines" 
+ that a commit looks for when tracing a parent. The branch in and of 
+ itself contains the pathing information, the commits only know about 
+ their parents. Therefor, if a commit is made from a parent that had 
+ previously been checked out without a branch name, the git log won't 
+ be able to find it. This is becuase the branch itself cannot be 
+ identified, and since the commit only knows to look for its parent, 
+ the log has no way to corroborate its existence.
+ branch
+
+ What is the result of merging two branches together? Why do we 
+ represent it in the diagram the way we do?
+
+Two bracnches merging broadly results in:
+1. Taking two (or more) versions of a project
+2. Comparing those versions to a common ancestor
+3. Noting the changes made
+4. Applying those changes to a new commit.
+
+This commit logs parent information form both tips of the merged 
+branches. Since this new commit now effectively draws its lineage from 
+the two parents, the subordiante branch's name becomes redundant. This 
+is represented i nthe diagram much the smae way a family tree might. 
+There is a split, a furtherance of those splits (with possibly more 
+splits betwixt them), and an eventual merge.
+
+What are the pros and cons of Git's automatic merging vs. always doing 
+merges manually?
+
+Using Git's built-in tool allows for a time-savings by letting the 
+software find changes, and iterate them for you. Doing that manually 
+would mean sifting through the code yourself, tracking the necessary 
+changes from one branch to another, adding / deleting / changing them 
+yourself, and updating the necessary branch.
+
+However, merging using Git's tool might pick up changes that are 
+redundant, or that don't make any sesnse. Additionally, the tool is
+only so good; if a change is made along both branches as compared to 
+their common ancestor, this creates a "merge conflict". This is an 
+item that must be positively identified and corrected line-by-line by 
+the user using the wizard inside of Git before a merge can be committed.
+These conflicts can also pick up on small things that would be obvious 
+to the coder, but need to be clarified by the software (taking time).
