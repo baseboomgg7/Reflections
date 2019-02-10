@@ -1,0 +1,7 @@
+When would you want to use a remote repository rather than keeping all your work local?
+
+It might be a good idea to use a remote repository instead of a local one when collaborating with others 
+on a project. It would make sense to push changes as they are made locally if it were only 
+you working on it, but if somebody also tries to merge changes to a remote it could cause a 
+lot of merge errors. Using the remote repository would allow for a more streamlined aggregation of 
+changes as they happen on the server.
